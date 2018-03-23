@@ -1,6 +1,12 @@
+require 'minitest/skip_dsl'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/palindrome_check'
+
+require 'pry'
+
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+
 
 describe "palindrome" do
   describe "basic tests" do
@@ -32,7 +38,7 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
 
-    # if the parameter is an object, check for nil
+    # if the parameter is an object, che""ck for nil
     it "nil object is not a string" do
       test_string = nil
 
