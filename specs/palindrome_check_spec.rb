@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/palindrome_check'
 
+Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
+
 describe "palindrome" do
   describe "basic tests" do
     it "palindrome input with odd character count" do
