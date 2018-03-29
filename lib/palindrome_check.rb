@@ -16,5 +16,5 @@ def palindrome_check(my_phrase)
       j -= 1
     end
   end
-  return true
+  true
 end
