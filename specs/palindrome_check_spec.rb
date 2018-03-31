@@ -17,7 +17,7 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
 
-    xit "not a palindrome" do
+    it "not a palindrome" do
       test_string = "empty"
 
       palindrome_check(test_string).must_equal false
