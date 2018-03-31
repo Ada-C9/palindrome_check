@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/reporters'
 require_relative '../lib/palindrome_check'
+require 'minitest/skip_dsl'
 
 describe "palindrome" do
   describe "basic tests" do
@@ -10,13 +11,13 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
 
-    it "palindrome input with even character count" do
+    xit "palindrome input with even character count" do
       test_string = "redder"
 
       palindrome_check(test_string).must_equal true
     end
 
-    it "not a palindrome" do
+    xit "not a palindrome" do
       test_string = "empty"
 
       palindrome_check(test_string).must_equal false
@@ -24,7 +25,7 @@ describe "palindrome" do
   end
 
   # check for edge cases
-  describe "edge cases" do
+  xdescribe "edge cases" do
     # if it's a string parameter, check for empty
     it "empty string reads the same backwards or forwards" do
       test_string = ""
