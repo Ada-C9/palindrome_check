@@ -8,20 +8,20 @@ def palindrome_check(my_phrase)
 
   while front < back
 
-  if my_phrase[front] != " " && my_phrase[back] != " "
+    if my_phrase[front] != " " && my_phrase[back] != " "
 
-    if my_phrase[front] != my_phrase[back]
-      return false
-    else
+      if my_phrase[front] != my_phrase[back]
+        return false
+      else
+        front += 1
+        back -= 1
+      end
+    elsif my_phrase[front] == " "
       front += 1
+    elsif my_phrase[back] == " "
       back -= 1
     end
-  elsif my_phrase[front] == " "
-    front += 1
-  elsif my_phrase[back] == " "
-    back -= 1
   end
-end
 
   return true
 
