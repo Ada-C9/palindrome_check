@@ -1,33 +1,27 @@
 # A method to check if the input string is a palindrome.
 # Return true if the string is a palindrome. Return false otherwise.
-require "pry"
-
 def palindrome_check(my_phrase)
-  phrase_cpy = my_phrase
-  index = 0
-  start_phrase = 0
+  return false if my_phrase == nil
 
-  end_phrase = my_phrase.length - 1
+  starting = 0
+  ending = my_phrase.length - 1
 
-  while index < my_phrase.length
-    # binding.pry
-    while start_phrase < end_phrase
+  while starting < ending
 
-      temp = my_phrase[start_phrase]
-      my_phrase[start_phrase] = my_phrase[end_phrase]
-      my_phrase[end_phrase] = temp
+    while my_phrase[starting] == " "
+      starting += 1
+    end
 
-      start_phrase += 1
-      end_phrase -= 1
+    while my_phrase[ending] == " "
+      ending -= 1
+    end
 
-    end # inside while
+    if my_phrase[starting] != my_phrase[ending]
+      return false
+    end
 
-    index += 1
-  end # outside while
-
-  puts "RESULT:#{phrase_cpy.object_id}"
-  puts "PHRASE: #{my_phrase.object_id}"
-
-  return true if phrase_cpy == my_phrase
-
-end # palindrome
+    starting += 1
+    ending -= 1
+  end
+  return true
+end

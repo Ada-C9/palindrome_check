@@ -11,7 +11,7 @@ describe "palindrome" do
       palindrome_check(test_string).must_equal true
     end
 
-    xit "palindrome input with even character count" do
+    it "palindrome input with even character count" do
       test_string = "redder"
 
       palindrome_check(test_string).must_equal true
@@ -25,7 +25,7 @@ describe "palindrome" do
   end
 
   # check for edge cases
-  xdescribe "edge cases" do
+  describe "edge cases" do
     # if it's a string parameter, check for empty
     it "empty string reads the same backwards or forwards" do
       test_string = ""
