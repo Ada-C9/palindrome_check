@@ -18,5 +18,3 @@ def palindrome_check(my_phrase)
   end
 
 end
-
-puts palindrome_check("redder")
