@@ -11,7 +11,7 @@ def palindrome_check(my_phrase)
 
   palindrome = true
 
-  while foward_index < (my_phrase.length - 1)
+  while backward_index > 0
     if my_phrase[foward_index] == " "
       while my_phrase[foward_index] == " "
         foward_index += 1
@@ -23,8 +23,6 @@ def palindrome_check(my_phrase)
         backward_index -= 1
       end
     end
-
-    puts " #{my_phrase[foward_index]} : #{my_phrase[backward_index]}"
 
     if my_phrase[foward_index] != my_phrase[backward_index]
       palindrome = false
