@@ -1,6 +1,6 @@
 require 'pry'
-# A method to check if the input string is a palindrome.
-# Return true if the string is a palindrome. Return false otherwise.
+# Time complexity is O(n/2), which reduces to O(n). The number of comparisons (ie, operations) is equivalent to the length of the string divided by 2.
+# Space complexity is O(1) because no additional memory is required if the size of the string (ie, input) increases.
 def palindrome_check(my_phrase)
   return false if my_phrase == nil
   return true if my_phrase.length == 1 || my_phrase.length == 0
