@@ -35,7 +35,7 @@ describe "palindrome" do
     # if the parameter is an object, check for nil
     it "nil object is not a string" do
       test_string = nil
-
+      
       palindrome_check(test_string).must_equal false
     end
 
