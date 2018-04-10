@@ -7,10 +7,9 @@ def palindrome_check(my_phrase)
     return false
   end
 
-  counter = 0
   letter_begin = 0
   letter_end = -1
-  while counter <= my_phrase.length
+  while letter_begin < (my_phrase.length + letter_end)
 
     while my_phrase[letter_begin] == " "
       letter_begin += 1
@@ -27,7 +26,6 @@ def palindrome_check(my_phrase)
       palindrome = false
       break
     end
-    counter += 1
   end
   return palindrome
 end
