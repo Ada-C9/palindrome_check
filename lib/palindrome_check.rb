@@ -2,4 +2,5 @@
 # Return true if the string is a palindrome. Return false otherwise.
 def palindrome_check(my_phrase)
   raise NotImplementedError
+  my_phrase.first
 end
